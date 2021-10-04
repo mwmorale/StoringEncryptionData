@@ -64,7 +64,7 @@ def clean_start():
 
 
 
-# ------------------ ENCRYPT ... to_NOTES -> to_IDK ------------------
+# ------------------ ENCRYPT ... to_NOTES -> ... ------------------
 def do_encrypt():
     f = open(to_NOTES, 'r', encoding='utf_8')
     fi = open(to_IDK, 'a+', encoding='utf_8')
@@ -76,7 +76,7 @@ def do_encrypt():
 
 
 
-# ------------------ DE-CRYPT ... to_IDK -> to_NOTES ------------------
+# ------------------ DE-CRYPT ... -> to_NOTES ------------------
 def do_decrypt():
     f = open(to_IDK, 'r', encoding='utf_8')
     fi = open(to_NOTES, 'a+', encoding='utf_8')
