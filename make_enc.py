@@ -1,14 +1,10 @@
 import random
 from my_library import bank
 from my_library import odd_chars
+from testGUI import do_pw_GUI
 
 
-print('\n-------------------------------------------')
-PW = input('CAREFULLY ENTER YOUR CHOSEN PASSWORD HERE: ')
-print('-------------------------------------------\n')
-
-
-
+PW = do_pw_GUI()
 PW_OFFSET = len(PW)
 
 def enc_motor(s):
@@ -18,6 +14,7 @@ def enc_motor(s):
     for i in s:
         if( i in bank ):
             ind = bank.index(i)
+            # rand = ind + len( PW_OFFSET )
             if( ind+PW_OFFSET < len(bank) ): #if rand<35 thennn i=bank[ ind+len(PW_OFFSET) ]
                 i = bank[ind+PW_OFFSET]
                 wrd = wrd+i
@@ -40,7 +37,7 @@ def enc_motor(s):
 
 
 
-# ---------- PREVIOUS VERSION OF ENCRYPTION MOTOR -----------
+# ---------- ORIG THAT STILL WORKS WITH STATIC RHS +1 SHIFT -----------
 # def enc_motor(s):
 #     s = s.lower()
 #     lst = []
@@ -106,7 +103,7 @@ def dec_motor(d):
 
 
 
-# -------------- PREVIOUS VERSION OF DECRYPTION MOTOR ------------------
+# -------------- ORIG THAT WORKS WITH ORIG ENC ------------------
 # def dec_motor(d):
 #     d = d.lower()
 #     lst = []
@@ -131,4 +128,3 @@ def dec_motor(d):
 #             #lst.append(i)
 #
 #     return wrd
-
