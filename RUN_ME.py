@@ -1,13 +1,12 @@
 from OS_manip import*
 from my_library import incorrect_input
+from testGUI import do_choice_GUI
 
 
 create_folder()
 clean_start()
 
-print( "\nYou are about to perform an action to your notes" )
-print('---> Enter enc to encrypt\n---> Enter dec to decrypt')
-action = input('\nEnter here: ')
+action = do_choice_GUI()
 
 
 if( action=='' or len(action)>3 ):
