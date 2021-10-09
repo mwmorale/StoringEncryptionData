@@ -1,6 +1,7 @@
 import os
 import subprocess
 from make_enc import*
+from testGUI import first_GUI
 
 
 # ----- GATHERING PATH INFO -----
@@ -58,13 +59,12 @@ def create_safe_note():
 def clean_start():
     if( os.path.exists(to_IDK)==False and os.path.exists(to_NOTES)==False ):
         create_notes()
-        print('See Desktop -> SecureData -> NOTES')
-        print('Re-run this program once you would like to encrypt/decrypt')
+        first_GUI()
         exit()
 
 
 
-# ------------------ ENCRYPT ... to_NOTES -> ... ------------------
+# ------------------ ENCRYPT ... to_NOTES -> to_IDK ------------------
 def do_encrypt():
     f = open(to_NOTES, 'r', encoding='utf_8')
     fi = open(to_IDK, 'a+', encoding='utf_8')
@@ -76,7 +76,7 @@ def do_encrypt():
 
 
 
-# ------------------ DE-CRYPT ... -> to_NOTES ------------------
+# ------------------ DE-CRYPT ... to_IDK -> to_NOTES ------------------
 def do_decrypt():
     f = open(to_IDK, 'r', encoding='utf_8')
     fi = open(to_NOTES, 'a+', encoding='utf_8')
