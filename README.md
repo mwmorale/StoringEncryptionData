@@ -5,4 +5,4 @@ Here, I am working with some very basic encryption. This is a work in progress. 
 
 New Feature(10/4): User(s) utilize a password that individualizes their encryption and therefore privacy.
 
-New Feature(10/9): Fully operable through a GUI and less operations due to preset GUI "buttons"
+New Feature(10/9): Fully operable through a GUI and less typing input due to the pre-set GUI "buttons"
